@@ -1,0 +1,64 @@
+{% extends "dental/base.html" %}
+{% load static %}
+
+{% block content %}
+	<div id="main" class="contact-list">
+		<h3 id="header">Patiets list</h3>
+
+		<table>
+			<tr>
+			  <th>Name</th>
+			  <th>Link to details</th>
+			</tr>
+
+			{% for patient in patients %}
+
+			<tr>
+				<td>{{ patient.name }}</td>
+				<td><a href="{{ patient.get_absolute_url }}">Patient details</a></td>
+			</tr>
+
+			{% endfor %}
+
+		</table>
+
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

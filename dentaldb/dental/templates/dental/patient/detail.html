@@ -1,0 +1,213 @@
+{% extends "dental/base.html" %}
+{% load static %}
+
+{% block title %}
+	Patient details
+{% endblock %}
+
+{% block content %}
+	<div class="contact-detail">
+		<h3>Patient details:</h3>
+		<span class="input-group-btn">
+			<button type="submit" class="btn btn-default" id="edit-btn">EDIT</button>
+		</span>
+		<span class="input-group-btn">
+			<button hidden type="submit" class="btn btn-default" id="save-btn">SAVE</button>
+		</span>
+		<span class="input-group-btn">
+			<button hidden type="submit" class="btn btn-default" id="cancel-btn">CANCEL</button>
+		</span>
+		<label hidden id="edit_description_label">Record is now in edit mode. Click on chosen tooth to change its status.</label>
+		<p></p>
+		<label class="detail_label">Patient name: </label><label id="name_label" class="detail_label">{{ patient.name }}</label></br>
+
+
+
+
+		<table>
+			<tr>
+			  <th>L8</th>
+			  <th>L7</th>
+			  <th>L6</th>
+			  <th>L5</th>
+			  <th>L4</th>
+			  <th>L3</th>
+			  <th>L2</th>
+			  <th>L1</th>
+			  <th>R1</th>
+			  <th>R2</th>
+			  <th>R3</th>
+			  <th>R4</th>
+			  <th>R5</th>
+			  <th>R6</th>
+			  <th>R7</th>
+			  <th>R8</th>
+
+
+			</tr>
+
+
+			<tr>
+				<td><img id="image1" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(1)"></td>
+				<td><img id="image2" src="{% static 'images/cavities.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(2)"></td>
+				<td><img id="image3" src="{% static 'images/stained.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(3)"></td>
+				<td><img id="image4" src="{% static 'images/chipped.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(4)"></td>
+				<td><img id="image5" src="{% static 'images/crooked.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(5)"></td>
+				<td><img id="image6" src="{% static 'images/gingivitis.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(6)"></td>
+				<td><img id="image7" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(7)"></td>
+				<td><img id="image8" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(8)"></td>
+				<td><img id="image9" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(9)"></td>
+				<td><img id="image10" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(10)"></td>
+				<td><img id="image11" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(11)"></td>
+				<td><img id="image12" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(12)"></td>
+				<td><img id="image13" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(13)"></td>
+				<td><img id="image14" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(14)"></td>
+				<td><img id="image15" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(15)"></td>
+				<td><img id="image16" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(16)"></td>
+			</tr>
+
+			<tr>
+				<td><img id="image17" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(17)"></td>
+				<td><img id="image18" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(18)"></td>
+				<td><img id="image19" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(19)"></td>
+				<td><img id="image20" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(20)"></td>
+				<td><img id="image21" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(21)"></td>
+				<td><img id="image22" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(22)"></td>
+				<td><img id="image23" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(23)"></td>
+				<td><img id="image24" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(24)"></td>
+				<td><img id="image25" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(25)"></td>
+				<td><img id="image26" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(26)"></td>
+				<td><img id="image27" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(27)"></td>
+				<td><img id="image28" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(28)"></td>
+				<td><img id="image29" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(29)"></td>
+				<td><img id="image30" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(30)"></td>
+				<td><img id="image31" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(31)"></td>
+				<td><img id="image32" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli" onclick="updateImageAfterClickOnImageForGivenIndex(32)"></td>
+			</tr>
+
+
+		</table></br>
+
+
+		<label class="detail_label">Legend</label>
+
+		<table>
+			<tr>
+			  <th>Healthy</th>
+			  <th>Cavities</th>
+			  <th>Chipped</th>
+			  <th>Crooked</th>
+			  <th>Gingivitis</th>
+
+
+			</tr>
+
+
+			<tr>
+				<td><img id="image1" src="{% static 'images/healthy.jpg' %}" alt="Italian Trulli"></td>
+				<td><img id="image2" src="{% static 'images/cavities.jpg' %}" alt="Italian Trulli"></td>
+				<td><img id="image3" src="{% static 'images/chipped.jpg' %}" alt="Italian Trulli"></td>
+				<td><img id="image4" src="{% static 'images/crooked.jpg' %}" alt="Italian Trulli"></td>
+				<td><img id="image5" src="{% static 'images/gingivitis.jpg' %}" alt="Italian Trulli"></td>
+			</tr>
+
+
+
+		</table>
+
+
+
+
+
+
+
+	</div>
+	<label hidden id="element_id">{{ patient.id }}</label>
+	<label hidden id="tooth1">{{ patient.tooth1 }}</label>
+	<label hidden id="tooth2">{{ patient.tooth2 }}</label>
+	<label hidden id="tooth3">{{ patient.tooth3 }}</label>
+	<label hidden id="tooth4">{{ patient.tooth4 }}</label>
+	<label hidden id="tooth5">{{ patient.tooth5 }}</label>
+	<label hidden id="tooth6">{{ patient.tooth6 }}</label>
+	<label hidden id="tooth7">{{ patient.tooth7 }}</label>
+	<label hidden id="tooth8">{{ patient.tooth8 }}</label>
+	<label hidden id="tooth9">{{ patient.tooth9 }}</label>
+	<label hidden id="tooth10">{{ patient.tooth10 }}</label>
+	<label hidden id="tooth11">{{ patient.tooth11 }}</label>
+	<label hidden id="tooth12">{{ patient.tooth12 }}</label>
+	<label hidden id="tooth13">{{ patient.tooth13 }}</label>
+	<label hidden id="tooth14">{{ patient.tooth14 }}</label>
+	<label hidden id="tooth15">{{ patient.tooth15 }}</label>
+	<label hidden id="tooth16">{{ patient.tooth16 }}</label>
+	<label hidden id="tooth17">{{ patient.tooth17 }}</label>
+	<label hidden id="tooth18">{{ patient.tooth18 }}</label>
+	<label hidden id="tooth19">{{ patient.tooth19 }}</label>
+	<label hidden id="tooth20">{{ patient.tooth20 }}</label>
+	<label hidden id="tooth21">{{ patient.tooth21 }}</label>
+	<label hidden id="tooth22">{{ patient.tooth22 }}</label>
+	<label hidden id="tooth23">{{ patient.tooth23 }}</label>
+	<label hidden id="tooth24">{{ patient.tooth24 }}</label>
+	<label hidden id="tooth25">{{ patient.tooth25 }}</label>
+	<label hidden id="tooth25">{{ patient.tooth25 }}</label>
+	<label hidden id="tooth26">{{ patient.tooth26 }}</label>
+	<label hidden id="tooth27">{{ patient.tooth27 }}</label>
+	<label hidden id="tooth28">{{ patient.tooth28 }}</label>
+	<label hidden id="tooth29">{{ patient.tooth29 }}</label>
+	<label hidden id="tooth30">{{ patient.tooth30 }}</label>
+	<label hidden id="tooth31">{{ patient.tooth31 }}</label>
+	<label hidden id="tooth32">{{ patient.tooth32 }}</label>
+
+
+
+	<script src="{% static 'javascript/record_updater.js' %}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
